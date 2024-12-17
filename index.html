@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Anemia</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="pageHeader">
+        <h2>Kalkulator Anemia</h2>
+    </header>
+    <form id="anemiaForm">
+        <label for="name">Nama :</label>
+        <input type="text" id="name" required>
+
+        <label for="kecamatan">Kecamatan :</label>
+        <select id="kecamatan" required>
+            <option value="" disabled selected>Pilih Kecamatan</option>
+            <option value="beji">Beji</option>
+            <option value="bojongsari">Bojongsari</option>
+            <option value="cilodong">Cilodong</option>
+            <option value="cimanggis">Cimanggis</option>
+            <option value="cinere">Cinere</option>
+            <option value="cipayung">Cipayung</option>
+            <option value="limo">Limo</option>
+            <option value="pancoranmas">Pancoran Mas</option>
+            <option value="sawangan">Sawangan</option>
+            <option value="sukmajaya">Sukmajaya</option>
+            <option value="tapos">Tapos</option>
+        </select>
+
+        <label for="kelurahan">Kelurahan :</label>
+        <select id="kelurahan" required>
+            <option value="" disabled selected>Pilih Kelurahan</option>
+        </select>
+
+        <label for="rt-rw">RT/RW :</label>
+        <input type="text" id="rt-rw" placeholder="Contoh: 02/05" required>
+
+        <label for="gender">Jenis Kelamin :</label>
+        <select id="gender" required>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+        </select>
+
+        <label for="age">Usia (tahun) :</label>
+        <input type="number" id="age" min="0" step="0.1" required>
+
+        <label for="hemoglobin">Kadar Hemoglobin (g/dL) :</label>
+        <input type="number" id="hemoglobin" step="0.1" min="0" required>
+    </form>
+
+    <div class="result" id="result"></div>
+</body>
+</html>

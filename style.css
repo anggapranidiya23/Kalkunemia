@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+/* Sticky Header yang responsif */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #f0f8ff;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+h2 {
+    color: #000000;
+    font-size: 2em;
+    margin: 0;
+    transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* Ukuran kecil saat di-scroll */
+.scrolled h2 {
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+
+/* Style untuk form */
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1.1em;
+    color: #555;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Kelas untuk hasil dan pesan peringatan */
+.warning-message, .result {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    display: none;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Kelas fade-in */
+.result.show, .warning-message.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Diagnosis Warna */
+.tidak-anemia {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.anemia-ringan {
+    background-color: #fff9c4;
+    color: #f57f17;
+}
+
+.anemia-sedang {
+    background-color: #ffe082;
+    color: #e65100;
+}
+
+.anemia-berat {
+    background-color: #ff8a80;
+    color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.8em;
+    }
+
+    form {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input, select {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .result, .warning-message {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input, select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .result, .warning-message {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
